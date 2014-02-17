@@ -1,4 +1,6 @@
 Rnb::Application.routes.draw do
+  resources :flats
+
   get "pages/index"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
