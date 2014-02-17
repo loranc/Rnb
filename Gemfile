@@ -1,5 +1,18 @@
 source 'https://rubygems.org'
 
+group :development do
+  gem "better_errors"
+  gem 'quiet_assets'
+  gem 'pry'
+  gem 'better_errors'
+end
+
+# Authentication
+gem 'devise'
+
+# Simple form
+gem 'simple_form'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
