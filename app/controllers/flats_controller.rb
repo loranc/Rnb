@@ -24,7 +24,7 @@ class FlatsController < ApplicationController
   # POST /flats
   # POST /flats.json
   def create
-    @flat = Flat.new(flat_params)
+    @flat = current_user.flats.create(flat_params)
 
     respond_to do |format|
       if @flat.save
@@ -69,6 +69,6 @@ class FlatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flat_params
-      params.require(:flat).permit(:title, :address, :day_price, :description, :owner_id)
+      params.require(:flat).permit(:title, :address, :day_price, :description)
     end
 end

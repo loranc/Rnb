@@ -1,6 +1,14 @@
-<h1>Pages#index</h1>
-<p>Find me in app/views/pages/index.html.erb</p>
+<h1>HOME</h1>
+<h2>Look at Ziss ! </h2>
 
+<% if !user_signed_in? %>
+<p>Vous n'êtes pas encore connecté à notre super site</p>
 <%= link_to "Sign in", new_user_session_path %>
-
+<%= link_to "Sign up", new_user_registration_path %>
+<% else %>
+Vous êtes connecté
 <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+<% end %>
+
+<%= link_to "View the flat list", flats_path %>
+
