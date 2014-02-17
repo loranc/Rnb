@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217143833) do
-
-  create_table "flat_tags", id: false, force: true do |t|
-    t.integer  "flat_id"
-    t.integer  "tag_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(version: 20140217154833) do
 
   create_table "flats", force: true do |t|
     t.string   "title"
@@ -26,6 +19,13 @@ ActiveRecord::Schema.define(version: 20140217143833) do
     t.decimal  "day_price"
     t.text     "description"
     t.integer  "owner_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "flats_tags", id: false, force: true do |t|
+    t.integer  "flat_id"
+    t.integer  "tag_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
