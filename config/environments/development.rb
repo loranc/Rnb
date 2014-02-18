@@ -26,4 +26,10 @@ Rnb::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
+
+  # Default URL Options
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Let Paperclip know to look there
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
