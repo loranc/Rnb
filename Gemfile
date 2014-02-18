@@ -4,8 +4,10 @@ group :development do
   gem "better_errors"
   gem 'quiet_assets'
   gem 'pry-rails'
-  gem 'better_errors'
 end
+
+# Paperclip
+gem "paperclip", "~> 3.0"
 
 # Authentication & Profile pictures
 gem 'devise'

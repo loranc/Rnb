@@ -32,4 +32,7 @@ Rnb::Application.configure do
 
   # Let Paperclip know to look there
   Paperclip.options[:command_path] = "/usr/local/bin/"
+
+
+
 end

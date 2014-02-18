@@ -15,15 +15,18 @@ class FlatsController < ApplicationController
   # GET /flats/new
   def new
     @flat = Flat.new
+    @picture = @flat.pictures.build
   end
 
   # GET /flats/1/edit
   def edit
+    @picture = @flat.pictures.build
   end
 
   # POST /flats
   # POST /flats.json
   def create
+
     @flat = current_user.flats.create(flat_params)
 
     respond_to do |format|
@@ -69,6 +72,6 @@ class FlatsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flat_params
-      params.require(:flat).permit(:title, :address, :day_price, :description)
+      params.require(:flat).permit(:title, :address, :day_price, :description, tag_ids: [], pictures_attributes: [:id, :file])
     end
 end

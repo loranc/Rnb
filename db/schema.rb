@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140217154835) do
+ActiveRecord::Schema.define(version: 20140218112056) do
 
 # Could not dump table "flats" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass
@@ -19,6 +19,16 @@ ActiveRecord::Schema.define(version: 20140217154835) do
   create_table "flats_tags", id: false, force: true do |t|
     t.integer  "flat_id"
     t.integer  "tag_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "pictures", force: true do |t|
+    t.string   "file_file_name"
+    t.string   "file_content_type"
+    t.integer  "file_file_size"
+    t.datetime "file_updated_at"
+    t.integer  "flat_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

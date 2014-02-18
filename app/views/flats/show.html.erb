@@ -25,5 +25,16 @@
   <%= @flat.owner_id %>
 </p>
 
+<p>
+  <strong>Tags:</strong>
+  <% @flat.tags.each do |tag| %>
+    <%= tag.name %>
+  <% end %>
+</p>
+
+<% if !@flat.pictures.empty? %>
+<%= image_tag @flat.pictures.first.file.url(:thumb) %>
+<% end %>
+
 <%= link_to 'Edit', edit_flat_path(@flat) %> |
 <%= link_to 'Back', flats_path %>
