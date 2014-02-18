@@ -3,12 +3,13 @@ source 'https://rubygems.org'
 group :development do
   gem "better_errors"
   gem 'quiet_assets'
-  gem 'pry'
+  gem 'pry-rails'
   gem 'better_errors'
 end
 
-# Authentication
+# Authentication & Profile pictures
 gem 'devise'
+gem 'gravtastic'
 
 # Simple form
 gem 'simple_form'

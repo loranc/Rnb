@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   has_many :flats, foreign_key: "owner_id"
 
+  include Gravtastic
+  gravtastic :size => 40
 end
 
 

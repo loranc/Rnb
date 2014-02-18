@@ -29,4 +29,7 @@ Rnb::Application.configure do
 
   # Default URL Options
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  # Let Paperclip know to look there
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end

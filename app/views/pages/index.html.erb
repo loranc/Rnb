@@ -1,14 +1,12 @@
-<h1>HOME</h1>
-<h2>Look at Ziss ! </h2>
+<h1>Home</h1>
+
+<p><%= link_to "View the flat list", flats_path %></p>
 
 <% if !user_signed_in? %>
-<p>Vous n'êtes pas encore connecté à notre super site</p>
-<%= link_to "Sign in", new_user_session_path %>
-<%= link_to "Sign up", new_user_registration_path %>
+<p><li><%= link_to "Sign in", new_user_session_path %></li></p>
+<p><li><%= link_to "Sign up", new_user_registration_path %></li></p>
 <% else %>
-Vous êtes connecté
-<%= link_to "Log out", destroy_user_session_path, method: :delete %>
+<li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
 <% end %>
 
-<%= link_to "View the flat list", flats_path %>
 
