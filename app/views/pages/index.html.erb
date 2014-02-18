@@ -1,6 +1,7 @@
 <h1>Home</h1>
 
 <p><%= link_to "View the flat list", flats_path %></p>
+<p><%= link_to "Add flat", new_flat_path %></p>
 
 <% if !user_signed_in? %>
 <p><li><%= link_to "Sign in", new_user_session_path %></li></p>
