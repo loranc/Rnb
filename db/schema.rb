@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140218112056) do
+ActiveRecord::Schema.define(version: 20140218183739) do
+
+  create_table "bookings", id: false, force: true do |t|
+    t.date     "start_date"
+    t.date     "end_date"
+    t.integer  "booker_id_id"
+    t.integer  "flat_id_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "bookings", ["booker_id_id"], name: "index_bookings_on_booker_id_id"
+  add_index "bookings", ["flat_id_id"], name: "index_bookings_on_flat_id_id"
 
 # Could not dump table "flats" because of following NoMethodError
 #   undefined method `[]' for nil:NilClass

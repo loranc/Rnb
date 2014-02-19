@@ -28,7 +28,6 @@
     <%= f.text_area :description %>
   </div>
 
-  <div>
   <%= f.collection_check_boxes :tag_ids, Tag.all, :id, :name %>
 
   <%= f.fields_for :pictures, @picture do |picture_f| %>
