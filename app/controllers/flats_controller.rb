@@ -1,5 +1,8 @@
 class FlatsController < ApplicationController
   before_action :set_flat, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new]
+
+
 
   # GET /flats
   # GET /flats.json
@@ -20,7 +23,7 @@ class FlatsController < ApplicationController
 
   # GET /flats/1/edit
   def edit
-    @picture = @flat.pictures.first.save
+    @picture = @flat.pictures.first
   end
 
   # POST /flats

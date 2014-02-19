@@ -1,5 +1,7 @@
 Rnb::Application.routes.draw do
-  resources :flats
+  resources :flats do
+    resources :bookings
+  end
 
   get "pages/index"
   devise_for :users

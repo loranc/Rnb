@@ -35,6 +35,8 @@
 <% if !@flat.pictures.empty? %>
 <%= image_tag @flat.pictures.first.file.url(:thumb) %>
 <% end %>
-
+<% if @flat.belongs_to? current_user %>
+  <p>book this flat</p>
+<% end %>
 <%= link_to 'Edit', edit_flat_path(@flat) %> |
 <%= link_to 'Back', flats_path %>
